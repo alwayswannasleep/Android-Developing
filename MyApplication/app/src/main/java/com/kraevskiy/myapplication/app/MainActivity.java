@@ -1,13 +1,11 @@
 package com.kraevskiy.myapplication.app;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
-
-import java.io.File;
 
 public class MainActivity extends Activity {
 
@@ -16,38 +14,30 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_facebook_notifications);
 
-        File storage = Environment.getRootDirectory();
-
-        PrintFilePaths(storage);
-
-        Button myButton = (Button) findViewById(R.id.button_1);
-
-        myButton.setOnClickListener(new View.OnClickListener() {
+        View.OnTouchListener onTouchListener = new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                Log.d(TAG, "Click");
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        v.setBackgroundColor(Color.rgb(197, 240, 246));
+                        Log.i(TAG, "ACTION_DOWN");
+                        break;
+                    case MotionEvent.ACTION_CANCEL:
+                    case MotionEvent.ACTION_UP:
+                        v.setBackgroundColor(Color.WHITE);
+                        Log.i(TAG, "ACTION_UP");
+                        break;
+                }
+
+                return true;
             }
-        });
-    }
+        };
 
-    private void PrintFilePaths(File file) {
-        Log.d(TAG, file.getPath());
-
-        File[] files = file.listFiles();
-        if (files == null) {
-            return;
-        }
-
-        for (File f : files) {
-            if (f.isDirectory()){
-                Log.d(TAG, f.getPath());
-
-                PrintFilePaths(f);
-            } else {
-                Log.d(TAG, f.getPath());
-            }
-        }
+        findViewById(R.id.notification_1).setOnTouchListener(onTouchListener);
+        findViewById(R.id.notification_2).setOnTouchListener(onTouchListener);
+        findViewById(R.id.notification_3).setOnTouchListener(onTouchListener);
+        findViewById(R.id.notification_4).setOnTouchListener(onTouchListener);
     }
 }
