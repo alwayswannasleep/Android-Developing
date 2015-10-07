@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Resources0710</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_close">Close</string>
+    <string name="action_open">Open</string>
+    <string name="action_view">View</string>
+    <string name="action_help">Help</string>
+</resources>
