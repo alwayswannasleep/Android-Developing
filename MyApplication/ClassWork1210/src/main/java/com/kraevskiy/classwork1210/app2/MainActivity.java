@@ -1,11 +1,8 @@
-package com.kraevskiy.homework1.app2;
+package com.kraevskiy.classwork1210.app2;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-
 
 public class MainActivity extends Activity {
 
@@ -22,7 +19,7 @@ public class MainActivity extends Activity {
             counter = savedInstanceState.getInt(EXTRA_COUNTER);
         }
 
-        Log.d(TAG, "OnCreate()" + counter);
+        Log.d(TAG, "OnCreate()" + getIntent().getStringExtra(MainActivity2.EXTRA_TEXT));
     }
 
     @Override
