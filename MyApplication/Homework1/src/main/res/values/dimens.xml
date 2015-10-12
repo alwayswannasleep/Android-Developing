@@ -1,0 +1,41 @@
+<resources>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+  <dimen name="activity_horizontal_margin">16dp</dimen>
+  <dimen name="activity_vertical_margin">16dp</dimen>
+
+  <!--  GENERAL -->
+
+  <dimen name="zero_dip">0dp</dimen>
+
+  <dimen name="text_size_on_main_bar">20sp</dimen>
+  <dimen name="main_bar_height">50dp</dimen>
+  <dimen name="main_bar_padding">12dp</dimen>
+  <dimen name="main_bar_button_width">30dp</dimen>
+  <dimen name="main_bar_button_height">30dp</dimen>
+  <dimen name="main_bar_button_margin">10dp</dimen>
+
+  <!--  activity_facebook_notification  -->
+
+  <dimen name="list_item_padding">10dp</dimen>
+  <dimen name="list_item_margin">5dp</dimen>
+  <dimen name="list_item_main_image_width">75dp</dimen>
+  <dimen name="list_item_secondary_image_size">25dp</dimen>
+  <dimen name="list_item_text_main_size">22sp</dimen>
+  <dimen name="list_item_secondary_text_size">14sp</dimen>
+
+  <!--  activity_facebook_main  -->
+
+  <dimen name="name_text_padding">15dp</dimen>
+  <dimen name="name_text_size">20sp</dimen>
+
+  <!--  activity_facebook_news  -->
+
+  <dimen name="news_item_horizontal_margin">10dp</dimen>
+  <dimen name="news_item_vertical_margin">10dp</dimen>
+  <dimen name="news_item_bar_height">50dp</dimen>
+  <dimen name="news_item_bar_horizontal_margin">8dp</dimen>
+  <dimen name="news_item_bar_vertical_margin">8dp</dimen>
+  <dimen name="news_item_text_horizontal_margin">10dp</dimen>
+  <dimen name="news_item_text_vertical_margin">10dp</dimen>
+
+</resources>

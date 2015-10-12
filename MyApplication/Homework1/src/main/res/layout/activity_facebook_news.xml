@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray">
+
+  <RelativeLayout
+    android:id="@+id/news_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_bar_height"
+    android:layout_gravity="top"
+    android:background="@color/main_bar_color"
+    android:padding="@dimen/main_bar_padding">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/news_name"
+      android:textColor="@android:color/white"
+      android:textSize="@dimen/text_size_on_main_bar"/>
+
+    <ImageView
+      android:id="@+id/image"
+      android:layout_width="@dimen/main_bar_button_width"
+      android:layout_height="@dimen/main_bar_button_height"
+      android:src="@mipmap/ic_launcher"
+      android:layout_marginStart="@dimen/main_bar_button_margin"
+      android:layout_marginLeft="@dimen/main_bar_button_margin"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentRight="true"/>
+
+    <ImageView
+      android:layout_width="@dimen/main_bar_button_width"
+      android:layout_height="@dimen/main_bar_button_height"
+      android:src="@mipmap/ic_launcher"
+      android:layout_toStartOf="@+id/image"
+      android:layout_toLeftOf="@+id/image"/>
+
+  </RelativeLayout>
+
+  <LinearLayout
+    android:id="@+id/functional_bar"
+    android:layout_below="@+id/news_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_bar_height"
+    android:orientation="horizontal"
+    android:background="@android:color/white">
+
+    <ImageView
+      android:layout_width="@dimen/zero_dip"
+      android:layout_height="wrap_content"
+      android:src="@mipmap/ic_launcher"
+      android:layout_weight="1"
+      android:background="@android:color/white"/>
+
+    <ImageView
+      android:layout_width="@dimen/zero_dip"
+      android:layout_height="wrap_content"
+      android:src="@mipmap/ic_launcher"
+      android:layout_weight="1"/>
+
+    <ImageView
+      android:layout_width="@dimen/zero_dip"
+      android:layout_height="wrap_content"
+      android:src="@mipmap/ic_launcher"
+      android:layout_weight="1"/>
+
+    <ImageView
+      android:layout_width="@dimen/zero_dip"
+      android:layout_height="wrap_content"
+      android:src="@mipmap/ic_launcher"
+      android:layout_weight="1"/>
+
+    <ImageView
+      android:layout_width="@dimen/zero_dip"
+      android:layout_height="wrap_content"
+      android:src="@mipmap/ic_launcher"
+      android:layout_weight="1"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_below="@+id/functional_bar">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/news_item_vertical_margin"
+      android:layout_marginStart="@dimen/news_item_horizontal_margin"
+      android:layout_marginLeft="@dimen/news_item_horizontal_margin"
+      android:layout_marginEnd="@dimen/news_item_horizontal_margin"
+      android:layout_marginRight="@dimen/news_item_horizontal_margin"
+      android:background="@android:color/white">
+
+      <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/news_item_bar_height"
+        android:layout_marginStart="@dimen/news_item_bar_horizontal_margin"
+        android:layout_marginLeft="@dimen/news_item_bar_horizontal_margin"
+        android:layout_marginTop="@dimen/news_item_bar_vertical_margin"
+        android:layout_alignParentTop="true">
+
+
+      </RelativeLayout>
+
+      <TextView
+        android:id="@+id/news_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/news_item_text"
+        android:layout_below="@+id/title_bar"
+        android:layout_margin="@dimen/news_item_text_horizontal_margin"/>
+
+      <ImageView
+        android:id="@+id/image_1"
+        android:layout_below="@+id/news_item_text"
+        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:src="@mipmap/image"/>
+
+      <TextView
+        android:id="@+id/likes_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_1"
+        android:text="10 likes  3 comments"/>
+
+      <RelativeLayout
+        android:layout_below="@+id/likes_comments"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/news_item_bar_height">
+
+      </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/news_item_vertical_margin"
+      android:layout_marginStart="@dimen/news_item_horizontal_margin"
+      android:layout_marginLeft="@dimen/news_item_horizontal_margin"
+      android:layout_marginEnd="@dimen/news_item_horizontal_margin"
+      android:layout_marginRight="@dimen/news_item_horizontal_margin"
+      android:background="@android:color/white">
+
+      <RelativeLayout
+        android:id="@+id/title_bar_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/news_item_bar_height"
+        android:layout_marginStart="@dimen/news_item_bar_horizontal_margin"
+        android:layout_marginLeft="@dimen/news_item_bar_horizontal_margin"
+        android:layout_marginTop="@dimen/news_item_bar_vertical_margin"
+        android:layout_alignParentTop="true">
+
+      </RelativeLayout>
+
+      <TextView
+        android:id="@+id/news_item_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/news_item_text"
+        android:layout_below="@+id/title_bar_2"
+        android:layout_margin="@dimen/news_item_text_horizontal_margin"/>
+
+      <ImageView
+        android:id="@+id/image_2"
+        android:layout_below="@+id/news_item_text_2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@mipmap/image"/>
+
+      <TextView
+        android:id="@+id/likes_comments_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_2"
+        android:text="10 likes  3 comments"/>
+
+      <RelativeLayout
+        android:layout_below="@+id/likes_comments_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/news_item_bar_height">
+
+      </RelativeLayout>
+
+    </RelativeLayout>
+
+  </LinearLayout>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_bar_height"
+    android:layout_alignParentBottom="true"
+    android:background="@color/transparnt_main_bar_color"
+    android:padding="@dimen/main_bar_padding"
+    >
+
+    <ImageView
+      android:id="@+id/status_image"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:src="@mipmap/ic_launcher"
+      android:layout_centerVertical="true"/>
+
+    <TextView
+      android:id="@+id/status_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toEndOf="@+id/status_image"
+      android:layout_toRightOf="@+id/status_image"
+      android:text="@string/status"
+      android:textColor="@android:color/white"
+      android:textSize="15sp"
+      android:layout_centerVertical="true"/>
+
+    <View
+      android:id="@+id/delimiter_1"
+      android:layout_width="1dp"
+      android:layout_height="25dp"
+      android:layout_toEndOf="@+id/status_text"
+      android:layout_toRightOf="@+id/status_text"
+      android:background="@android:color/darker_gray"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"/>
+
+    <ImageView
+      android:id="@+id/photo_image"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:src="@mipmap/ic_launcher"
+      android:layout_toEndOf="@+id/delimiter_1"
+      android:layout_toRightOf="@+id/delimiter_1"
+      android:layout_centerVertical="true"/>
+
+    <TextView
+      android:id="@+id/photo_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toEndOf="@+id/photo_image"
+      android:layout_toRightOf="@+id/photo_image"
+      android:text="@string/photo"
+      android:textColor="@android:color/white"
+      android:textSize="15sp"
+      android:layout_centerVertical="true"/>
+
+    <View
+      android:id="@+id/delimiter_2"
+      android:layout_width="1dp"
+      android:layout_height="25dp"
+      android:layout_toEndOf="@+id/photo_text"
+      android:layout_toRightOf="@+id/photo_text"
+      android:background="@android:color/darker_gray"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"/>
+
+    <ImageView
+      android:id="@+id/check_in_image"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:src="@mipmap/ic_launcher"
+      android:layout_toEndOf="@+id/delimiter_2"
+      android:layout_toRightOf="@+id/delimiter_2"
+      android:layout_centerVertical="true"/>
+
+    <TextView
+      android:id="@+id/check_in_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toEndOf="@+id/check_in_image"
+      android:layout_toRightOf="@+id/check_in_image"
+      android:text="@string/check_in"
+      android:textColor="@android:color/white"
+      android:textSize="15sp"
+      android:layout_centerVertical="true"/>
+
+  </RelativeLayout>
+
+</RelativeLayout>
