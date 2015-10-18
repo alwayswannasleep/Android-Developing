@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/friends_top_panel"
+        android:layout_width="match_parent"
+        android:background="@color/top_panel_color"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/top_panel_height">
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/friends_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/friends_top_panel"
+        android:transcriptMode="alwaysScroll"
+        android:smoothScrollbar="true"
+        android:layout_marginLeft="@dimen/friend_list_item_horizontal_margin"
+        android:layout_marginRight="@dimen/friend_list_item_horizontal_margin" />
+
+</RelativeLayout>

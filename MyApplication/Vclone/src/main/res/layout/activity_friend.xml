@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/friend_top_panel"
+        android:layout_width="match_parent"
+        android:background="@color/top_panel_color"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/top_panel_height">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/friend_top_panel"
+        android:scrollbars="none"
+        android:background="@color/friend_base_panel_background_color">
+
+        <LinearLayout
+            android:id="@+id/friend_base_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/friend_base_panel_horizontal_padding"
+            android:paddingRight="@dimen/friend_base_panel_horizontal_padding"
+            android:paddingBottom="@dimen/friend_base_panel_vertical_padding"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/friend_avatar"
+                        android:layout_width="@dimen/friend_avatar_size"
+                        android:layout_height="@dimen/friend_avatar_size"
+                        android:layout_marginBottom="@dimen/friend_avatar_margin"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/friend_general_name_horizontal_margin"
+                        android:layout_marginRight="@dimen/friend_general_name_horizontal_margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/friend_full_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/friend_full_name_text_size"/>
+
+                        <TextView
+                            android:id="@+id/friend_last_seen_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/friend_last_seen_text_size"/>
+
+                        <TextView
+                            android:id="@+id/friend_status_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/friend_status_bar_vertical_margin"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/friend_status_text_size"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:id="@+id/friend_status_bar_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/friend_status_bar_2_height"
+                        android:paddingLeft="@dimen/friend_status_bar_2_horizontal_padding"
+                        android:paddingRight="@dimen/friend_status_bar_2_horizontal_padding"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/friend_status_bar_2_text_size"
+                        android:textColor="@android:color/black"/>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friend_date_of_birthday"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/friend_full_info_secondary_text_size"/>
+
+                    <TextView
+                        android:id="@+id/friend_date_of_birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/friend_full_info_main_text_size"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/friend_full_info_item_separator_height"
+                        android:layout_marginTop="@dimen/friend_full_info_item_separator_vertical_margin"
+                        android:layout_marginBottom="@dimen/friend_full_info_item_separator_vertical_margin"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friend_relation"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/friend_full_info_secondary_text_size"/>
+
+                    <TextView
+                        android:id="@+id/friend_relation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/friend_full_info_main_text_size"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/friend_full_info_item_separator_height"
+                        android:layout_marginTop="@dimen/friend_full_info_item_separator_vertical_margin"
+                        android:layout_marginBottom="@dimen/friend_full_info_item_separator_vertical_margin"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friend_country"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/friend_full_info_secondary_text_size"/>
+
+                    <TextView
+                        android:id="@+id/friend_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/friend_full_info_main_text_size"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/friend_full_info_item_separator_height"
+                        android:layout_marginTop="@dimen/friend_full_info_item_separator_vertical_margin"
+                        android:layout_marginBottom="@dimen/friend_full_info_item_separator_vertical_margin"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friend_city"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/friend_full_info_secondary_text_size"/>
+
+                    <TextView
+                        android:id="@+id/friend_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/friend_full_info_main_text_size"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/friend_full_info_item_separator_height"
+                        android:layout_marginTop="@dimen/friend_full_info_item_separator_vertical_margin"
+                        android:layout_marginBottom="@dimen/friend_full_info_item_separator_vertical_margin"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friend_education"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/friend_full_info_secondary_text_size"/>
+
+                    <TextView
+                        android:id="@+id/friend_education"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/friend_full_info_main_text_size"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/friend_full_info_item_separator_height"
+                        android:layout_marginTop="@dimen/friend_full_info_item_separator_vertical_margin"
+                        android:layout_marginBottom="@dimen/friend_full_info_item_separator_vertical_margin"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friend_university"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/friend_full_info_secondary_text_size"/>
+
+                    <TextView
+                        android:id="@+id/friend_universities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/friend_full_info_main_text_size"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
